@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.detail.DetailActivity"
+    android:fitsSystemWindows="true"
+    android:background="#0C000000">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/main_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimarySurface"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_detail_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="32dp"
+                android:elevation="4dp"
+                android:transitionName="photo"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tv_detail_name"
+                style="@style/wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="@tools:sample/full_names" />
+
+            <TextView
+                android:id="@+id/tv_detail_username"
+                style="@style/wrap_content"
+                tools:text="@tools:sample/first_names" />
+
+            <TextView
+                android:id="@+id/tv_detail_location"
+                style="@style/wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_baseline_location_on_24"
+                tools:text="@tools:sample/lorem" />
+
+            <TextView
+                android:id="@+id/tv_detail_company"
+                android:visibility="gone"
+                style="@style/wrap_content"
+                app:drawableStartCompat="@drawable/ic_baseline_domain_24"
+                tools:text="@tools:sample/lorem" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_numbers"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginBottom="48dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        style="@style/cv_column" >
+
+                        <TextView
+                            style="@style/wrap_content"
+                            android:text="@string/repositories" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_repository"
+                            style="@style/wrap_content.cv_subtitle"
+                            tools:text="100" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/cv_column" >
+
+                        <TextView
+                            style="@style/wrap_content"
+                            android:text="@string/following" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_following"
+                            style="@style/wrap_content.cv_subtitle"
+                            tools:text="200" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/cv_column" >
+
+                        <TextView
+                            style="@style/wrap_content"
+                            android:text="@string/followers" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_followers"
+                            style="@style/wrap_content.cv_subtitle"
+                            tools:text="599" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@color/white"
+            android:background="?attr/colorPrimarySurface"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorSecondary"
+        android:src="@drawable/ic_favorite"
+        android:layout_margin="24dp"
+        android:layout_gravity="bottom|end"
+        android:contentDescription="@string/add_to_favorite" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

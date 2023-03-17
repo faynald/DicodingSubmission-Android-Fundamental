@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Github User</string>
+    <string name="user_not_found">User Not Found :(</string>
+    <string name="repositories">Repositories</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="data_not_found">Data Not Found</string>
+    <string name="followers_title">Followers</string>
+    <string name="following_title">Following</string>
+    <string name="add_to_favorite">Add to favorite</string>
+    <string name="dark_mode_setting">Dark Mode Setting</string>
+    <string name="favorite">Favorite</string>
+    <string name="no_favorites">No favorites yet</string>
+    <string name="no_favorites_subtitle">Tap the favorite icon on any user page\nto add it to your library</string>
+    <string name="begin_search">Please fill username in Search Bar</string>
+
+    <string-array name="tab_title">
+        <item>@string/followers_title</item>
+        <item>@string/following_title</item>
+    </string-array>
+</resources>
